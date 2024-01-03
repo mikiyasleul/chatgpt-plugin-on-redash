@@ -10,7 +10,7 @@ To install the Redash Chatbot Add-on, follow these steps:
           ````
        create .env file on the same directory with docker-composer.yaml file
    
-       set put values for
+       Set values for
        REDASH_COOKIE_SECRET = ?
        REDASH_COOKIE_SECRET = ?
        
