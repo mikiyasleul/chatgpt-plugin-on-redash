@@ -3,15 +3,30 @@ The Redash Chatbot Plugin is a powerful tool that integrates a chatbot powered b
 
 ## Installation
 To install the Redash Chatbot Add-on, follow these steps:
-    1. Install Docker Desktop on your machine.
-    2. Clone this repository to your local machine. (https://github.com/getredash/redash)
-    3. Navigate to the project directory and run the following command to start Redash using Docker:
+1. Install Docker Desktop on your machine.
+2. Clone this repository to your local machine. (https://github.com/getredash/redash)
+3. Creating .env with the necessary secret keys
+    
+          ````
+       create .env file on the same directory with docker-composer.yaml file
+   
+       set put values for
+       REDASH_COOKIE_SECRET = ?
+       REDASH_COOKIE_SECRET = ?
+       
+       ```
+    
+       Use this script to create the keys  python -c 'import secrets; print(secrets.token_hex())'     
+5. Navigate to the project directory and run the following command to start Redash using Docker:
+    
 
-   ````
-   docker-compose up
-   ```
+       ````
+       docker-compose up
+       ```
+    
+       This will download the necessary dependencies and start the Redash server.
 
-   This will download the necessary dependencies and start the Redash server.
+## Next Step
 - Once the server is up and running, open your web browser and navigate to `http://localhost:5000` to access the Redash application.
 - Create the necessary database schema for the time-series data. Refer to the Redash documentation for detailed instructions on setting up the database schema.
 - Prepare the frontend chatbot plugin using React. This plugin will handle the user interface for the chatbot functionality. Implement the necessary components and integrate them into Redash's front end.
@@ -22,7 +37,7 @@ To install the Redash Chatbot Add-on, follow these steps:
 
 ## Usage
 Once the Redash Chatbot Add-on is installed and configured, users can interact with the chatbot by accessing Redash's interface.
-    - They can input natural language queries related to the dashboards and databases to extract valuable insights.
-    - The chatbot will process the queries
-    - interact with the LLM models
-    - provide relevant responses and visualizations.
+- They can input natural language queries related to the dashboards and databases to extract valuable insights.
+- The chatbot will process the queries
+- interact with the LLM models
+- provide relevant responses and visualizations.
