@@ -92,6 +92,9 @@ from redash.handlers.visualizations import (
     VisualizationListResource,
     VisualizationResource,
 )
+from redash.handlers.chat import (
+       ChatResource
+)
 from redash.handlers.widgets import WidgetListResource, WidgetResource
 from redash.utils import json_dumps
 
@@ -114,7 +117,7 @@ def json_representation(data, code, headers=None):
     resp.headers.extend(headers or {})
     return resp
 
-
+api.add_org_resource(ChatResource, "/api/chat", endpoint="chat")
 api.add_org_resource(AlertResource, "/api/alerts/<alert_id>", endpoint="alert")
 api.add_org_resource(AlertMuteResource, "/api/alerts/<alert_id>/mute", endpoint="alert_mute")
 api.add_org_resource(

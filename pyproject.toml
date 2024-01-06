@@ -86,6 +86,7 @@ werkzeug = "2.3.8"
 wtforms = "2.2.1"
 xlsxwriter = "1.2.2"
 tzlocal = "4.3.1"
+openai = "^1.6.1"
 
 [tool.poetry.group.all_ds]
 optional = true
@@ -169,7 +170,7 @@ build-backend = "poetry.core.masonry.api"
 [tool.ruff]
 exclude = [".git", "viz-lib", "node_modules", "migrations"]
 ignore = ["E501"]
-select = ["C9", "E", "F", "W", "I001"]
+select = ["C9", "E", "F", "W", "I001", "UP004"]
 
 [tool.ruff.mccabe]
 max-complexity = 15
